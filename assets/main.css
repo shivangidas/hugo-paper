@@ -1356,6 +1356,11 @@
       --tw-prose-pre-bg: var(--tw-prose-invert-pre-bg);
       --tw-prose-th-borders: var(--tw-prose-invert-th-borders);
       --tw-prose-td-borders: var(--tw-prose-invert-td-borders);
+      --pagefind-ui-primary: var(--color-white);
+      --pagefind-ui-text: var(--color-white);
+      --pagefind-ui-background: var(--color-black);
+      --pagefind-ui-border: var(--color-black);
+      --pagefind-ui-tag: var(--color-black);
     }
   }
   .dark\:hover\:bg-white\/\[12\%\] {
