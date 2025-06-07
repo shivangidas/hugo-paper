@@ -5,16 +5,16 @@
     <h1 class="my-0! pb-2.5">{{- .Title -}}</h1>
 
     {{- if ne .Type "page" -}}
-    <div class="text-xs antialiased opacity-60">
-      {{- if .Date -}}
-      <time>{{- .Date | time.Format ":date_medium" -}}</time>
-      {{- end -}}<!---->
+    <div class="text-xs antialiased">
       {{- $single_author := or .Params.Author site.Author.name -}}
       <!---->
       {{- if $single_author -}}
-      <span class="mx-1">&middot;</span>
-      <span>{{- $single_author -}}</span>
+      <span>Published by&nbsp;{{- $single_author -}}</span>
       {{- end -}}
+      {{- if .Date -}}
+      <time>&nbsp;on&nbsp;{{- .Date | time.Format ":date_medium" -}}</time>
+      {{- end -}}<!---->
+
     </div>
     {{- end -}}
   </header>
