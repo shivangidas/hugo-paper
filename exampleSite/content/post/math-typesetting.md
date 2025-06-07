@@ -27,19 +27,10 @@ In this example we will be using [KaTeX](https://katex.org/)
 
 **Note:** Use the online reference of [Supported TeX Functions](https://katex.org/docs/supported.html)
 
-{{< math.inline >}}
-
-{{</ math.inline >}}
-
 ### Examples
 
-{{< math.inline >}}
+Inline math: $\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…$
 
-<p>
-Inline math: \(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\)
-</p>
-
-{{</ math.inline >}}
 
 Block math:
 
