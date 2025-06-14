@@ -5,6 +5,16 @@
 <h1 class="mb-14">#{{- .Title -}}</h1>
 {{- end -}}
 
+<!-- Series Title -->
+{{- if and .Title (eq .Type "series") -}}
+<h1 class="mb-14">{{- .Title -}}</h1>
+{{- end -}}
+
+<!-- Categories Title -->
+{{- if and .Title (eq .Type "categories") -}}
+<h1 class="mb-14">{{- .Title -}}</h1>
+{{- end -}}
+
 <!-- $pages -->
 {{- $pages := union .RegularPages .Sections -}}<!---->
 {{- if .IsHome -}}<!---->
@@ -34,9 +44,6 @@ $paginator.Pages -}}<!---->
   {{- end -}}<!---->
   {{- if site.Params.name -}}
   <div>
-    <div class="mt-3 mb-1 text-2xl font-medium text-black dark:text-white">
-      {{- site.Params.name -}}
-    </div>
     <div class="break-words">
       {{- site.Params.bio | default (print `A personal blog by `
       site.Params.name) -}}
@@ -58,6 +65,12 @@ $paginator.Pages -}}<!---->
   <time class="text-xs antialiased"
     >{{- .Date | time.Format ":date_medium" -}}</time
   >
+
+  <p>{{ .Summary }}
+  {{ if .Truncated }}
+  <a href="{{ .RelPermalink }}">Read more...</a>
+  {{ end }}</p>
+  
   <a class="absolute inset-0 text-[0px]" href="{{- .Permalink -}}"
     >{{- .Title -}}</a
   >

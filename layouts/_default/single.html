@@ -19,7 +19,24 @@
     {{- end -}}
   </header>
 
-  <section>{{- .Content -}}</section>
+  <section>
+    {{- if eq .Type "post" -}}
+      {{ if in .TableOfContents "li" }}
+          <details>
+            <summary>
+              In this post
+            </summary>
+            {{ .TableOfContents }}
+          </details>
+      {{- end -}}
+    {{- end -}}
+    {{- .Content -}}
+  </section>
+
+  {{- if ne .Type "subscribe" -}}
+  <h3>Subscribe</h3>
+  <p><a href="/subscribe">Subscribe via my newsletter or RSS feed</a></p>
+  {{- end -}}
 
   <!-- Post Tags -->
   {{- if .Params.tags -}}
