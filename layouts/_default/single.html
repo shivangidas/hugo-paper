@@ -20,7 +20,7 @@
   </header>
 
   <section>
-    {{- if eq .Type "post" -}}
+    {{- if and (eq .Type "post") (ne .Params.toc false) -}}
       {{ if in .TableOfContents "li" }}
           <details>
             <summary>
@@ -35,7 +35,7 @@
 
   {{- if ne .Type "subscribe" -}}
   <h3>Subscribe</h3>
-  <p><a href="/subscribe">Subscribe via my newsletter or RSS feed</a></p>
+  <p><a href="/subscribe">Subscribe to get the latest posts sent to your email.</a></p>
   {{- end -}}
 
   <!-- Post Tags -->
