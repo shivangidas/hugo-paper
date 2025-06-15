@@ -63,15 +63,27 @@ $paginator.Pages -}}<!---->
     >Featured</span
   >
   {{- end -}}
+
+  <!-- Post Categories -->
+  {{- if and $.IsHome .Params.categories -}}
+  <div class="text-xs antialiased mb-1.5">
+    {{- range .Params.categories -}} 
+    <span class="ltr:mr-1.5 rtl:ml-1.5 uppercase">{{- . -}}</span>&nbsp;
+    {{- end -}}
+  </div>
+  {{- end -}}
+
   <h2 class="my-0!">{{- .Title -}}</h2>
   <time class="text-xs antialiased"
     >{{- .Date | time.Format ":date_medium" -}}</time
   >
 
-  <p>{{ .Summary }}
-  {{ if .Truncated }}
-  <a href="{{ .RelPermalink }}">Read more...</a>
-  {{ end }}</p>
+  {{if $.IsHome}}
+    <p>{{ .Summary }}
+    {{ if .Truncated }}
+    <p>Read more...</p>
+    {{ end }}</p>
+  {{ end }}
   
   <a class="absolute inset-0 text-[0px]" href="{{- .Permalink -}}"
     >{{- .Title -}}</a

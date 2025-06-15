@@ -2,9 +2,20 @@
 
 <article>
   <header class="mb-14">
+
+    <!-- Post Categories -->
+    {{- if .Params.categories -}}
+    <div class="text-xs antialiased mb-1.5">
+      {{- range .Params.categories -}} {{- $href := print (absURL "categories/") (urlize .)
+      -}}
+      <a class="link ltr:mr-1.5 rtl:ml-1.5 uppercase" href="{{- $href -}}">{{- . -}}</a>{{" "}}
+      {{- end -}}
+    </div>
+    {{- end -}}
+
     <h1 class="my-0! pb-2.5">{{- .Title -}}</h1>
 
-    {{- if ne .Type "page" -}}
+    {{- if eq .Type "post" -}}
     <div class="text-xs antialiased">
       {{- $single_author := or .Params.Author site.Author.name -}}
       <!---->
@@ -16,6 +27,7 @@
       {{- end -}}<!---->
 
     </div>
+      
     {{- end -}}
   </header>
 
