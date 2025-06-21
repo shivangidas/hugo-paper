@@ -1,9 +1,9 @@
 <header
-  class="mx-auto flex h-[4.5rem] max-w-(--w) px-8 whitespace-nowrap lg:justify-center"
+  class="mx-auto flex h-[4.5rem] max-w-(--w) px-8 lg:justify-center"
 >
   <div class="relative z-50 flex items-center ltr:mr-auto rtl:ml-auto">
     <a
-      class="-translate-y-[1px] text-2xl font-medium"
+      class="-translate-y-[1px] text-2xl font-medium break-words"
       href="{{- `` | absURL -}}"
       >{{ site.Title }}</a
     >
@@ -11,6 +11,7 @@
       class="btn-dark text-[0px] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer {{ if site.Params.monoDarkIcon }}[background:url(./theme.svg)_left_center/cover_no-repeat] dark:invert{{ else }}[background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)]{{ end }} dark:[background-position:right]"
       role="button"
       aria-label="Dark"
+      title="Change colour theme"
     ></div>
   </div>
 

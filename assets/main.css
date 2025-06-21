@@ -558,7 +558,7 @@
       line-height: 1.4285714;
       margin-top: 0.8571429em;
     }
-    --tw-prose-body: oklch(0.373 0.034 259.733);
+    --tw-prose-body: oklch(0.23 0 0);
     --tw-prose-headings: oklch(0.21 0.034 264.665);
     --tw-prose-lead: oklch(0.446 0.03 256.802);
     --tw-prose-links: oklch(0.21 0.034 264.665);
@@ -983,7 +983,7 @@
     transition-timing-function: var(--ease-out);
   }
   .prose-neutral {
-    --tw-prose-body: oklch(0.371 0 0);
+    --tw-prose-body: oklch(0.23 0 0);
     --tw-prose-headings: oklch(0.205 0 0);
     --tw-prose-lead: oklch(0.439 0 0);
     --tw-prose-links: oklch(0.205 0 0);
