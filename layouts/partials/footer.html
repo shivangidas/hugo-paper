@@ -10,7 +10,7 @@
   {{- with $.Scratch.Get "social_list" -}}
   <div>
     <nav
-      class="mt-12 flex justify-center space-x-10 lg:mt-0 lg:items-center ltr:lg:ml-14 rtl:space-x-reverse rtl:lg:mr-14 dark:invert">
+      class="mt-3 mb-1.5 flex justify-center space-x-10 lg:mt-0 lg:items-center ltr:lg:ml-14 rtl:space-x-reverse rtl:lg:mr-14 dark:invert">
       {{- range . -}}<!---->
       <a class="h-7 w-7 text-[0px] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
         style="--url: url(./{{- . -}}.svg)"
