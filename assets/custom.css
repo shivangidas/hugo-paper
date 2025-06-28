@@ -1,2 +1,12 @@
 /* Place custom css here. */
 @reference './app.css';
+
+.inline-image {
+    float: none;
+    @media (width >= 40rem) {
+        float: right;
+        margin:0px 0px 0px 15px;
+    }
+}
+
+
