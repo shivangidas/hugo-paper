@@ -84,7 +84,9 @@
     rel="apple-touch-icon"
     href="{{- site.Params.appleTouchIcon | default `apple-touch-icon.png` | absURL -}}"
   />
-
+  <!-- Web manifest -->
+  <link rel="manifest" href="/manifest.json">
+  
   <!-- generator -->
   {{- hugo.Generator -}}
 

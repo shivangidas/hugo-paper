@@ -54,5 +54,16 @@
     </main>
 
     {{- partial "footer.html" . -}}
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
+            console.log(`serviceWorker registration successful with the following scope: ${registration.scope}`);
+          }, function (err) {
+            console.log(`serviceWorker registration has failed: ${err}`);
+          });
+        });
+     }
+     </script>
   </body>
 </html>
