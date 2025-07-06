@@ -25,36 +25,10 @@
 {{- $paginator := .Paginate $pages -}} {{- range $index, $page :=
 $paginator.Pages -}}<!---->
 
-<!-- avatar -->
 {{- if and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) -}}<!---->
 
-{{- $avatar_url := $.Scratch.Get "avatar_url" -}}<!---->
-{{- if or $avatar_url site.Params.name -}}
-<div class="-mt-2 mb-12 flex items-center">
-  {{- if $avatar_url -}}
-  <div
-    class="h-24 w-24 shrink-0 rounded-full border-[0.5px] border-black/10 bg-white/50 p-3 ltr:mr-5 ltr:-ml-1 rtl:-mr-1 rtl:ml-5 dark:bg-white/90!"
-  >
-    <img
-      class="not-prose my-0 h-full w-full rounded-full bg-black/5! hover:animate-spin dark:bg-black/80!"
-      src="{{- $avatar_url -}}"
-      alt="{{- site.Params.name | default site.Title -}}"
-    />
-  </div>
-  {{- end -}}<!---->
-  {{- if site.Params.name -}}
-  <div>
-    <div class="break-words">
-      {{- site.Params.bio | default (print `A personal blog by `
-      site.Params.name) -}}
-    </div>
-  </div>
-  {{- end -}}
-</div>
-{{- end -}}<!---->
-<div><b>New here? Try the <a class="link" href="/archive">archives</a> for a structured reading.</b></div>
-<aside class="mb-12">All the information in this blog is for educational purpose only and must not be taken as financial advice
-  or recommendation.</aside>
+<div class="mb-12"><b>New here? Try the <a class="link" href="/archive">archives</a> for a structured reading.</b></div>
+
 {{- end -}}
 
 <section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">

@@ -31,7 +31,7 @@
     {{- end -}}
   </header>
 
-  <section>
+  <section data-pagefind-body>
     {{- if and (eq .Type "post") (ne .Params.toc false) -}}
       {{ if in .TableOfContents "li" }}
           <details>
