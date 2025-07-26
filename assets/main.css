@@ -135,6 +135,10 @@
   img, video {
     max-width: 100%;
     height: auto;
+    pointer-events: none;
+  }
+  figure {
+    pointer-events: none;
   }
   button, input, select, optgroup, textarea, ::file-selector-button {
     font: inherit;
