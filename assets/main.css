@@ -562,7 +562,7 @@
     --tw-prose-body: oklch(0.23 0 0);
     --tw-prose-headings: oklch(0.21 0.034 264.665);
     --tw-prose-lead: oklch(0.446 0.03 256.802);
-    --tw-prose-links: oklch(0.21 0.034 264.665);
+    --tw-prose-links: rgb(0, 0, 238);
     --tw-prose-bold: oklch(0.21 0.034 264.665);
     --tw-prose-counters: oklch(0.551 0.027 264.364);
     --tw-prose-bullets: oklch(0.472 0.01 258.338);
@@ -580,7 +580,7 @@
     --tw-prose-invert-body: oklch(0.872 0.01 258.338);
     --tw-prose-invert-headings: #fff;
     --tw-prose-invert-lead: oklch(0.707 0.022 261.325);
-    --tw-prose-invert-links: #fff;
+    --tw-prose-invert-links: #b7b7fa;
     --tw-prose-invert-bold: #fff;
     --tw-prose-invert-counters: oklch(0.707 0.022 261.325);
     --tw-prose-invert-bullets: oklch(0.89 0.01 131.23);
@@ -987,7 +987,7 @@
     --tw-prose-body: oklch(0.23 0 0);
     --tw-prose-headings: oklch(0.205 0 0);
     --tw-prose-lead: oklch(0.439 0 0);
-    --tw-prose-links: oklch(0.205 0 0);
+    --tw-prose-links: rgb(0, 0, 238);
     --tw-prose-bold: oklch(0.205 0 0);
     --tw-prose-counters: oklch(0.556 0 0);
     --tw-prose-bullets: oklch(0.42 0 0);
@@ -1005,7 +1005,7 @@
     --tw-prose-invert-body: oklch(0.87 0 0);
     --tw-prose-invert-headings: #fff;
     --tw-prose-invert-lead: oklch(0.708 0 0);
-    --tw-prose-invert-links: #fff;
+    --tw-prose-invert-links: #b7b7fa;
     --tw-prose-invert-bold: #fff;
     --tw-prose-invert-counters: oklch(0.708 0 0);
     --tw-prose-invert-bullets: oklch(0.89 0.01 131.23);
@@ -1497,7 +1497,7 @@ article {
     color: var(--color-black);
   }
 }
-.link {
+a, .link {
   --tw-duration: 200ms;
   transition-duration: 200ms;
   &:hover {
