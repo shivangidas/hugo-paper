@@ -137,9 +137,6 @@
     height: auto;
     pointer-events: none;
   }
-  figure {
-    pointer-events: none;
-  }
   button, input, select, optgroup, textarea, ::file-selector-button {
     font: inherit;
     font-feature-settings: inherit;
